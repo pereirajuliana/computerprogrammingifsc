@@ -1,0 +1,12 @@
+# Exercício 05
+
+aluno = input("Digite o seu nome: ")
+n1 = float(input("Digite a nota de Cálculo: "))
+n2 = float(input("Digite a nota de Física: "))
+n3 = float(input("Digite a nota de Química: "))
+média_final = (n1 + n2 + n3) / 3
+
+if média_final >= 7:
+    print("%s, você foi aprovado com média final igual a %s!" %(aluno, média_final))
+else:
+    print("Lamento %s, infelizmente você não atingiu a média!" %(aluno))
