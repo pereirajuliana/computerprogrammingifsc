@@ -1,0 +1,8 @@
+s0 = float(input(f"Digite a posição inicial em metros: "))
+v0 = float(input(f"Digite a velocidade inicial m/s: "))
+a = float(input(f"Digite a aceleração em m/s²: "))
+t, tf = 0, 10
+while (t <= tf):
+  pos = s0 + v0 * t + (a * t ** 2)/2
+  print(f"No instante t = {t: ^2} s, a posição será de {pos: ^5.1f} m.")
+  t = t + 1
