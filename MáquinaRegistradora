@@ -19,5 +19,5 @@ while True:
   elif (código == 0):
     break
   else:
-    print("Código Inválido!5")
+    print("Código Inválido!")
 print(f"O valor total da compra foi de R$ {total:.2f}.")
