@@ -1,0 +1,23 @@
+total = 0.0
+while True:
+  código = int(input("Informe o código do produto: "))
+  if (código == 1):
+    quantidade = int(input("Informe a quantidade do produto: "))
+    total += quantidade*0.5
+  elif (código == 2):
+    quantidade = int(input("Informe a quantidade do produto: "))
+    total += quantidade*1.0
+  elif (código == 3):
+    quantidade = int(input("Informe a quantidade do produto: "))
+    total += quantidade*4.0
+  elif (código == 5):
+    quantidade = int(input("Informe a quantidade do produto: "))
+    total += quantidade*7.0
+  elif (código == 9):
+    quantidade = int(input("Informe a quantidade do produto: "))
+    total += quantidade*8.0
+  elif (código == 0):
+    break
+  else:
+    print("Código Inválido!5")
+print(f"O valor total da compra foi de R$ {total:.2f}.")
