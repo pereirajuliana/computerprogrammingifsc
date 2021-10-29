@@ -1,0 +1,7 @@
+tabuada = 1
+while tabuada <= 10:
+  valor = 1
+  while valor <= 10:
+    print(f"{tabuada}x{valor} = {tabuada*valor}")
+    valor += 1 
+  tabuada += 1
