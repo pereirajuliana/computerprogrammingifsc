@@ -3,4 +3,4 @@
 distância = float(input("Digite a distância em km: "))
 velocidade_média = float(input("Digite a velocidade média em km/h: "))
 tempo = (distância / velocidade_média) * 60
-print("O tempo estimado é de %s minutos." %round(tempo))
+print(f"O tempo estimado é de {tempo:.1f} minutos.") 
