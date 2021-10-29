@@ -1,10 +1,11 @@
 # Exercício 04
 
-mg = float(input("Digite a massa em gramas: "))
+massa_em_gramas = float(input("Digite a massa de água em gramas: "))
 temp_inicial = float(input("Digite a temperatura inicial: "))
 temp_final = float(input("Digite a temperatura final: "))
 temp = (temp_inicial - temp_final)
-numc = 1 # cal/g
-energia = (mg * numc * temp)
-
-print("A quantidade de energia necessária para atingir a variação de temperatura desejada é de %s cal." %(energia))
+cal = float(1) # cal/g
+joule = int(4.186) # J/g °C
+energia01 = (massa_em_gramas * cal * temp)
+energia02 = (massa_em_gramas * joule * temp)
+print(f"A quantidade de energia necessária para atingir a variação de temperatura desejada é de {energia01:.0f} cal ou {energia02:.0f} Joules.")
