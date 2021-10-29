@@ -2,4 +2,4 @@
 
 c = float(input("Digite a temperatura em °C: "))
 f = 9 * c / 5 + 32
-print("A temperatura de {}°C equivale a {}°F!".format(c,f))
+print(f"A temperatura de {c:.2f}°C equivale a {f:.2f}°F!")
