@@ -1,0 +1,12 @@
+# Exercício 05 (utilizando if/else)
+
+aluno = input("Digite o seu nome: ")
+nota1 = float(input("Digite a nota de Matemática: "))
+nota2 = float(input("Digite a nota de Física: "))
+nota3 = float(input("Digite a nota de Química: "))
+
+média_final = (nota1 + nota2 + nota3) / 3
+if média_final >= 7:
+  print("{}, você foi aprovado(a) com média final igual a {:.0f}.".format(aluno, média_final))
+elif média_final <7:
+  print("{}, infelizmente você foi reprovado(a) com média final igual a {:.0f}.".format(aluno, média_final))
