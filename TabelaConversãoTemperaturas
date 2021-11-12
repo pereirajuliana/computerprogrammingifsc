@@ -1,0 +1,14 @@
+# Exercício 01 Tabela de Conversão Temperaturas
+
+tabela = "Tabela de Conversão de Temperaturas".upper()
+print(tabela)
+linha = "Graus Celsius\tGraus Fahrenheit"
+print(linha)
+
+celsius = 0
+fahrenheit = 0
+for i in range(0, 100):
+  while celsius <= 100:
+    print(f"{celsius}°C\t\t{fahrenheit}°F")
+    celsius = celsius + 10
+    fahrenheit = celsius * (9 / 5) + 32
