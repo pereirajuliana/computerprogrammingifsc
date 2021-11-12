@@ -1,0 +1,12 @@
+# Exercício 03 Método de Newton
+
+num = float(input("Digite um número: "))
+x = 1
+while True:
+  novo_x = 0.5*(x + num/x)
+  erro = abs(x - novo_x)
+  print("x: %.12f Erro: %.12f" %(novo_x, erro))
+  x = novo_x
+  if erro < 12**(-8):
+    break 
+print("A raiz quadrada de %.2f é %f." %(num, x))
