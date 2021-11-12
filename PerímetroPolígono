@@ -1,0 +1,15 @@
+# Exercício 04 Perímetro de um Polígono 
+
+lista_pontos = []
+i = 0
+while True:
+  valor_de_x = float(input(f"Digite uma coordenada para x{i+1}: ")) 
+  valor_de_y = float(input(f"Digite uma coordenada para y{i+1}: ")) 
+  i = i + 1
+  if valor_de_x == 0: # Preciso entender como fazer a condição da linha em branco
+    break
+  lista_pontos.append(valor_de_x)
+  lista_pontos.append(valor_de_y)
+
+print("O perímetro desse polígono é: ")
+print(sum(lista_pontos))
