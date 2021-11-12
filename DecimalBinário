@@ -1,0 +1,16 @@
+# Exercício 02 Decimal para Binário 
+
+n = int(input("Digite um número decimal: "))
+def conversor_binario(n):
+  if n == 0:
+    return "0"
+  else:
+    binario = ""
+    while n > 1:
+      resto = n%2
+      n = int(n/2)
+      binario += str(resto)
+    binario += "1"
+  return binario[-1::-1]
+print("O número binário equivalente ao decimal digitado é igual a: ")
+print(conversor_binario(n))
