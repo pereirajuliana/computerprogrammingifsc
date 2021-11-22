@@ -1,0 +1,15 @@
+import random as r
+n = 1
+N = 1000
+valores = {}
+while n <= N:
+  dado1 = r.randint(1,6)
+  dado2 = r.randint(1,6)
+  soma = dado1 + dado2
+  valores[soma] = valores[soma] + 1 if (soma in valores) else 1
+  n += 1
+print("------------------------------------")
+print("| Soma | Frequência | % Frequência |")
+for i in range(2,13):
+  print(f"| {i: 4} | {valores[i]: 10} | {valores[i]*100/N: 12.2f} |")
+print("------------------------------------")
