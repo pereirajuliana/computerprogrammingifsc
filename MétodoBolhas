@@ -1,0 +1,20 @@
+L = [15, 7, 3, 20, 85, 4, 98, 78, 56, 45, 30, 21, 22, 34, 55]
+while True:
+  i = 0
+  trocou = False
+  while i < (len(L) - 1):
+    if L[i] > L[i + 1]:
+      trocou = True
+      temp = L[i]
+      L[i] = L[i+1]
+      L[i+1] = temp
+    i += 1
+  if not trocou:
+    print("Ordem Crescente: ", L)
+    L2 = []
+    id = len(L) - 1
+    while id >= 0:
+      L2.append(L[id])
+      id -= 1
+    print("Ordem Decrescente: ", L2)
+    break
