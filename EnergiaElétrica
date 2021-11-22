@@ -1,0 +1,14 @@
+tabela = {
+          "R":{"ref":500, "valor1": 0.40, "valor2":0.65},
+          "C":{"ref":1000, "valor1": 0.55, "valor2":0.60},
+          "I":{"ref":5000, "valor1": 0.55, "valor2":0.60}
+          }
+tipo_instalação = input(""" Informe o tipo de instalação, usando 
+R - para residências
+I - para indústrias
+C - para comércios 
+""")
+if (tipo_instalação.upper() in tabela.keys()):
+  kwh = float(input("Informe a quantidade de kWh consumida: "))
+  valor = kwh*tabela[tipo_instalação.upper()]["valor1"] if (kwh <= tabela[tipo_instalação.upper()]["ref"]) else kwh*tabela[tipo_instalação.upper()]["valor2"]
+  print(f"O valor a pagar pelo fornecimento de energia de {int(kwh)} kWh é de R$ {valor:.2f}.")
