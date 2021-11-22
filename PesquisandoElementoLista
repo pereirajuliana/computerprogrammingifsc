@@ -1,0 +1,9 @@
+L = [15, 7, 3, 20, 85, 4, 98, 78, 56, 45, 30, 21, 22, 34, 55]
+n = int(input("Informe um número inteiro: "))
+verifica = [False]
+for i,v in enumerate(L):
+  if v == n:
+    verifica = [True]
+    verifica.append(i+1)
+msg = f"O número {n} está na posição {verifica[1]}." if (verifica[0]) else f"O número {n} não foi encontrado."
+print(msg)
