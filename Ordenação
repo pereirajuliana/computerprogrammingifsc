@@ -1,0 +1,17 @@
+L = [5,1,4,2,8]
+numPassos = 1
+while True:
+  i = 0
+  trocou = False
+  while i < (len(L) - 1):
+    if L[i] > L[i + 1]:
+      trocou = True
+      temp = L[i]
+      L[i] = L[i+1]
+      L[i+1] = temp
+    i += 1
+  if not trocou:
+    print("Lista ordenada: ", L)
+    print("N° de passos: ", numPassos)
+    break
+  numPassos += 1
