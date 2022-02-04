@@ -1,0 +1,24 @@
+import pylab as pl
+
+ti = []
+xi = []
+with open("/content/drive/MyDrive/Juliana Pereira/IFSC - Lic. em Física/Programação de Computadores/movimento_bola.txt") as arquivo:
+  for linha in arquivo.readlines():
+    d = linha.split(" ")
+    ti.append(float(d[0]))
+    xi.append(float(d[1]))
+
+i = 0
+v = [0] 
+while (i < len(y) - 1):
+  dx = xi[i+1]-xi[i]
+  dt = ti[i+1]-ti[i]
+  v.append(dx/dt)
+  i += 1
+
+pl.plot(ti,xi,"g-",label="Bola")                  
+pl.xlabel("Tempo (s)")               
+pl.ylabel("Posição (m)")              
+pl.title("Gráfico da Posição")       
+pl.legend()                           
+pl.show()       
