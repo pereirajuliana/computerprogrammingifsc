@@ -1,0 +1,29 @@
+import pylab as pl
+
+t = list(range(10)) #cria lista de 0 a 9
+y = [0,15,60,135,240,375,540,735,960,1215]
+
+#definindo velocidade
+i = 0
+v = [0] 
+while (i < len(y) - 1):
+  dy = y[i+1]-y[i]
+  dt = t[i+1]-t[i]
+  v.append(dy/dt)
+  i += 1
+
+#função plot coordenadas x e y, gráfico 2d
+
+pl.plot(t,y,"ro-",label="Foguete")    #gerar gráfico
+pl.xlabel("Tempo (s)")                #definir nome do eixo x
+pl.ylabel("Posição (m)")              #definir nome do eixo y
+pl.title("Gráfico da Posição")        #definir título do gráfico
+pl.legend()                           #mostrar legenda
+pl.show()                             #mostrar gráfico 
+
+pl.plot(t,v,"b*-",label="Foguete")
+pl.xlabel("Tempo (s)") 
+pl.ylabel("Velocidade (m/s)")
+pl.title("Gráfico da Velocidade") 
+pl.legend() 
+pl.show()
