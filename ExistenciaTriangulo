@@ -1,0 +1,15 @@
+a = 0
+b = 0
+c = 0
+
+print("Verifique se três comprimentos podem ou não formar um Triângulo: ")
+print("---------------------------------------------------------------")
+a = float(input("Informe o comprimento em cm do lado a: "))
+b = float(input("Informe o comprimento em cm do lado b: "))
+c = float(input("Informe o comprimento em cm do lado c: "))
+
+if a + b > c and b + c > a and a + c > b:
+  print(True)
+else:
+  print(False)
+  triangulo = a + b + c
