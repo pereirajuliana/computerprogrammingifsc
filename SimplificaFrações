@@ -1,0 +1,13 @@
+def mdc(x, y):
+    if x % y == 0:
+        return y
+    else:
+      return mdc(y, x % y)
+
+def função(func, numerador, denominador):
+  x = mdc(numerador, denominador)
+  print(f"{(numerador/x):.0f} / {(denominador/x):.0f}")
+
+numer = int(input("Digite um número inteiro positivo para o numerador: "))
+denom = int(input("Digite um número inteiro positivo para o denominador: "))
+função(mdc, numer, denom)
