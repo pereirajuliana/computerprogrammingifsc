@@ -1,0 +1,33 @@
+value = 0
+
+class Morse(object):
+
+    def __init__(self):
+        self.morse_code = {
+            "A": ".-", "B": "-...", "C": "-.-.", "D": "-..", "E": ".", "F": "..-.", "G": "--.", "I": "..", "J": ".---", 
+            "K": "-.-", "L": ".-..", "M": "--", "N": "-.", "O": "---", "P": ".--.", "Q": "--.-", "R": ".-.",
+            "S": "...", "T": "-", "U": "..-", "V": "...-", "W": ".--", "X": "-..-", "Y": "-.--", "Z": "--..",
+            "0": "-----", "1": ".----", "2": "..---", "3": "...--", "4": "....-", "5": ".....", "6": "-....", "7": "--...", "8": "---..", "9": "----."
+            }
+
+    def decode(self, codigomorse):
+        code = codigomorse.split(" ")
+        texto = " "
+        for item in code:
+                if item == value:
+                    texto += key
+                    break
+        return texto
+
+    def encode(self, plaintext):
+        code = " "
+        for char in plaintext.upper():
+            if char in self.morse_code.keys():
+                code += self.morse_code[char] + " "
+        return code
+
+mensagem = input("Digite uma mensagem a ser traduzida para o código Morse: ")
+
+morse = Morse()
+codigo = morse.encode(mensagem)
+print("Código Morse: {0}".format(codigo.split("\n")))
