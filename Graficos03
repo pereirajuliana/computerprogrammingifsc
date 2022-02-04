@@ -1,0 +1,26 @@
+import pylab as pl
+
+t = list(range(10)) #cria lista de 0 a 9
+y = [0,15,60,135,240,375,540,735,960,1215]
+
+#definindo velocidade
+i = 0
+v = [0] 
+while (i < len(y) - 1):
+  dy = y[i+1]-y[i]
+  dt = t[i+1]-t[i]
+  v.append(dy/dt)
+  i += 1
+
+am1 = (v[4]-v[0])/(t[4]-t[1])
+am2 = (v[9]-v[5])/(t[9]-t[5])
+
+pl.plot(t,v,"o-k", label="Velocidades do Foguete")
+pl.plot([t[0],t[4]],[v[0],v[4]], "--r",label=f"am de 0 a 4 s: {am1:.2f} m/s")
+pl.plot([t[5],t[9]],[v[5],v[9]], "--b",label=f"am de 5 a 9 s: {am2:.2f} m/s")
+pl.xlabel("Tempo (s)")
+pl.ylabel("Posição (m)")
+pl.title("Gráfico da Posição")
+pl.legend()
+
+pl.show()
